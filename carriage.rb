@@ -4,7 +4,8 @@ require_relative('./info')
 
 class Carriage
   include Info
-  attr_accessor :type, :number
+  attr_accessor :type, :number, :place
+  attr_reader :occupied_place
 
   def initialize(number, type, place)
     @number = number
@@ -17,9 +18,7 @@ class Carriage
     @occupied_place += place
   end
 
-  attr_reader :occupied_place
-
   def free_place
-    @place - @occupied_place
+    @free_place = @place - @occupied_place
   end
 end

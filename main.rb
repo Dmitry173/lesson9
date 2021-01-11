@@ -284,7 +284,7 @@ class Railway
       puts 'Введите величину объёма, которую хотите занять'
       place = gets.to_i
       carriage.occupy_place(place)
-      puts "Занято: #{carriage.occupied_place}. Свободно: #{carriage.free_place}"
+      puts "Мест занято: #{carriage.occupied_place}. Мест свободно: #{carriage.free_place}"
     else
       carriage.occupy_place
       puts "Занято: #{carriage.occupied_place}. Свободно: #{carriage.free_place}"
